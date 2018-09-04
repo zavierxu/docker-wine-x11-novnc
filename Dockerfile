@@ -23,7 +23,7 @@ RUN apt-get update && \
 	apt-get install -y --no-install-recommends software-properties-common && \
         add-apt-repository ppa:ubuntu-wine/ppa && \
 	apt-get update && \
-apt-get install -y --no-install-recommends wine1.8 cabextract unzip p7zip zenity xvfb && \
+	apt-get install -y --no-install-recommends wine1.8 cabextract unzip p7zip zenity xvfb && \
 	curl -SL -k https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks  -o /usr/local/bin/winetricks && \
     chmod a+x /usr/local/bin/winetricks  && \
 # Installation of winbind to stop ntlm error messages.
@@ -39,8 +39,8 @@ apt-get install -y --no-install-recommends wine1.8 cabextract unzip p7zip zenity
     curl -SL -k https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Regular.otf -o /usr/share/fonts/TTF/SourceHanSansSC-Regular.otf && \
     curl -SL -k https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Bold.otf -o /usr/share/fonts/TTF/SourceHanSansSC-Bold.otf && \
     # Add pan-download:
-    curl http://dl.pandownload.com/download/PanDownload_v2.0.1.zip -o /home/wine/.cache/pandownload.zip && \
-    unzip /home/wine/.cache/pandownload.zip -d /home/wine/ && \
+    #curl http://dl.pandownload.com/download/PanDownload_v2.0.1.zip -o /home/wine/.cache/pandownload.zip && \
+    #unzip /home/wine/.cache/pandownload.zip -d /home/wine/ && \
 # Create user for ssh
     adduser \
             --home /home/xclient \
