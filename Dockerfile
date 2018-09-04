@@ -34,10 +34,10 @@ apt-get install -y --no-install-recommends wine1.8 cabextract unzip p7zip zenity
     chmod +x /usr/share/wine/mono/wine-mono-$WINE_MONO_VERSION.msi && \
     mkdir -p /usr/share/wine/gecko && \
     curl -SL -k 'http://dl.winehq.org/wine/wine-gecko/2.40/wine_gecko-2.40-x86.msi' -o /usr/share/wine/gecko/wine_gecko-2.40-x86.msi && \
-    # Add Traditional Chinese Fonts
+    # Add Simplified Chinese Fonts
     mkdir -p /usr/share/fonts/TTF/ && \
-    curl -SL -k https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/TraditionalChinese/SourceHanSansTC-Regular.otf -o /usr/share/fonts/TTF/SourceHanSansTC-Regular.otf && \
-    curl -SL -k https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/TraditionalChinese/SourceHanSansTC-Bold.otf -o /usr/share/fonts/TTF/SourceHanSansTC-Bold.otf && \
+    curl -SL -k https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Regular.otf -o /usr/share/fonts/TTF/SourceHanSansSC-Regular.otf && \
+    curl -SL -k https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Bold.otf -o /usr/share/fonts/TTF/SourceHanSansSC-Bold.otf && \
 # Create user for ssh
     adduser \
             --home /home/xclient \
@@ -46,7 +46,7 @@ apt-get install -y --no-install-recommends wine1.8 cabextract unzip p7zip zenity
             --gecos "user for running an xclient application" \
             --quiet \
             xclient && \
-    echo "xclient:1234" | chpasswd && \
+    echo "xclient:123456" | chpasswd && \
     # Clone noVNC
     git clone https://github.com/novnc/noVNC.git /home/xclient/novnc && \
     # Clone websockify for noVNC
