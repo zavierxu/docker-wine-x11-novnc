@@ -16,7 +16,7 @@ ENV HOME /home/xclient/
 	# Install vnc, window manager and basic tools
 RUN apt-get update && \
     apt-get install -y --no-install-recommends  language-pack-zh-hant  && \
-    apt-get install -y x11vnc xdotool supervisor fluxbox git && \
+    apt-get install -y x11vnc xdotool supervisor fluxbox git unzip && \
 	dpkg --add-architecture i386 && \
 
 # We need software-properties-common to add ppas.
