@@ -38,6 +38,9 @@ apt-get install -y --no-install-recommends wine1.8 cabextract unzip p7zip zenity
     mkdir -p /usr/share/fonts/TTF/ && \
     curl -SL -k https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Regular.otf -o /usr/share/fonts/TTF/SourceHanSansSC-Regular.otf && \
     curl -SL -k https://github.com/adobe-fonts/source-han-sans/raw/release/OTF/SimplifiedChinese/SourceHanSansSC-Bold.otf -o /usr/share/fonts/TTF/SourceHanSansSC-Bold.otf && \
+    # Add pan-download:
+    curl http://dl.pandownload.com/download/PanDownload_v2.0.1.zip -o /home/wine/.cache/pandownload.zip && \
+    unzip /home/wine/.cache/pandownload.zip -d /home/wine/ && \
 # Create user for ssh
     adduser \
             --home /home/xclient \
