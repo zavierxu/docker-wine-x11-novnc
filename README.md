@@ -1,16 +1,16 @@
 # Run A windows application with docker
 Using the docker image to run windows application like smartget on my Synology Nas(DS 916+)
 ## Install Image
-   `docker pull sykuang/wine`
+   `docker pull zavierxu/docker-wine-x11-novnc`
 ## Usage
 ### Run image as Server
    * Run
      ```bash
-     docker run -p 8080:8080 -p 8081:22 sykuang/wine
+     docker run -p 8080:8080 -p 8081:22 zavierxu/docker-wine-x11-novnc
      ```
-   * Run with Tranditional Chinese Support
+   * Run with Simplified Chinese Support
      ```bash
-     docker run -p 8080:8080 -p 8081:22  -e LANG=zh_TW.UTF-8 -e LC_ALL=zh_TW.UTF-8 sykuang/wine
+     docker run -p 8080:8080 -p 8081:22  -e LANG=zh_CN.UTF-8 -e LC_ALL=zh_CN.UTF-8 zavierxu/docker-wine-x11-novnc
      ```
    * Adanvace Run
      ```bash
@@ -19,7 +19,7 @@ Using the docker image to run windows application like smartget on my Synology N
      -v $HOME/WinApp:/home/xclient/.wine/drive_c/WinApp \
      -p 8080:8080 \
      -p 8081:22 \
-     sykuang/wine
+     zavierxu/docker-wine-x11-novnc
      ```
 
 This follows these docker conventions:
@@ -38,9 +38,10 @@ This follows these docker conventions:
 	```bash
 	ssh -x xclient@hostname -p 8081
 	```
-    Defalutl password is 1234
+    Defalutl password is 123456
 * Using noVNC
-	```
-	firefox http://hostname:8080
-	```
-	or just visit `http://hostname:8080` by the browse you like
+	visit `http://hostname:8080` by the browse you like
+
+### Thanks to
+	Thanks to sykuang.
+	This project is forked from https://github.com/sykuang/docker-wine-x11-novnc
